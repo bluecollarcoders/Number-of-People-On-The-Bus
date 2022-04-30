@@ -14,11 +14,22 @@ Please keep in mind that the test cases ensure that the number of people in the 
 
 The second value in the first integer array is 0, since the bus is empty in the first bus stop.
 
-## Solution
+## Solution 1
 ```javascript
 const number = (busStops) => {
   var x = 0;
   busStops.forEach(a => x = x + a[0] - a[1]);
   return x;
+}
+```
+
+## Solution 2
+```javascript
+const number = (busStops) => {
+store = 0;
+for(let i of busStops){
+store += i[0] - i[1];
+}
+return store;
 }
 ```
